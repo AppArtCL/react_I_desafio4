@@ -21,8 +21,8 @@ function App() {
       <Buscador comunaBuscada={handleComuna} />
       <MiApi comunaBuscada={comuna} />
       <footer>
-        <p>La información de esta página es responsabilidad del Ministerio de Salud de Chile.</p>
-        <p>Todos los derechos reservados Cristian Díaz</p>
+        <p>La información de esta página es responsabilidad de Datos.gob el portal centralizado de datos de Gobierno de Chile.</p>
+        <p>© Todos los derechos reservados Cristian Díaz</p>
       </footer>
     </>
   );

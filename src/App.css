@@ -50,14 +50,15 @@ main {
 .tabla-principal {
   max-width: 90%;
 }
-.mapa {
+.mapa, 
+.error {
   color: #ff0000;
   font-size: 1.2rem;
 }
 
 footer {
-  margin: 30px 0px 30px 0px;
+  margin: 2rem 0px 2rem 0px;
 }
 footer p {
-  margin: 0px;
+  margin: 0px 0px 0.5rem 0px;
 }
