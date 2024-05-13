@@ -18,14 +18,18 @@ const MiApi = ({ comunaBuscada }) => {
         throw new Error(`HTTP error! status: ${response.status}`);
       }
       const data = await response.json();
-      data.sort((a, b) => a.comuna_nombre.localeCompare(b.comuna_nombre));
-      setFarmacias(data);
+      setFarmacias(eliminaDuplicados(data).sort((a, b) => a.comuna_nombre.localeCompare(b.comuna_nombre)));
     } catch (error) {
       console.error("Failed to fetch data: ", error);
       setError(error.message);
     } finally {
       setIsLoading(false);
     }
+  };
+
+  const eliminaDuplicados = (farmacias) => {
+    const unicos = new Map(farmacias.map(farmacia => [farmacia.local_id, farmacia]));
+    return Array.from(unicos.values());
   };
 
   const capitalizar = (palabra) => {
